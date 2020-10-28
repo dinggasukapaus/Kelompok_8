@@ -1,9 +1,9 @@
 ### Progres 2
-- [ ] Menerapkan core widget dan root widget di aplikasi
+- [x] Menerapkan core widget dan root widget di aplikasi
 - [x] memberi penjelasan / deskripsi aplikasi di file readme github
 - [x] memberi laporan singkat mengenai pembaruan di setiap progres di file readme
 - [x] tulis nama dan nim kelompok di readme
-- [ ] membenahi file yang di push di github ( yang di push folder projectnya 1 ,project aja)
+- [x] membenahi file yang di push di github ( yang di push folder projectnya 1 ,project aja)
 
 ## Deskripsi aplikasi
 - Aplikasi ini dibuat atas dasar Tema SDGS 8 yaitu "Mendukung pertumbuhan ekonomi yang inklusif dan berkelanjutan, tenaga kerja penuh dan produktif dan pekerjaan yang layak bagi semua," Dari tema tersebut kami berinisiatif untuk membangun sebuah aplikasi bernama "Kerja.in" berbasis mobile. Aplikasi ini nantinya diharapkan dapat membantu para pelamar kerja dalam mencari serta memilah lahan pekerjaan yang sesuai dengan kemampuan ataupun keinginan. 
@@ -14,5 +14,5 @@
 - Muhammad Sadli Musthafa 182410102078
 
 ## Version App
-- Kerja.In versi beta : Dashboard
+- Kerja.In versi beta : Login
 
