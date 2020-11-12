@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:tugas1/register.dart';
+import 'package:tugas1/login.dart';
 
-class LoginPage extends StatefulWidget {
+class Register extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => new _State();
 }
 
-class _State extends State<LoginPage> {
+class _State extends State<Register> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
+    // TODO: implement build
     return Scaffold(
         appBar: AppBar(
-          title: Text('Login Kerja.In'),
+          title: Text('SignIn Kerja.In'),
         ),
         body: Padding(
             padding: EdgeInsets.all(10),
@@ -51,12 +52,16 @@ class _State extends State<LoginPage> {
                     ),
                   ),
                 ),
-                FlatButton(
-                  onPressed: () {
-                    //forgot password screen
-                  },
-                  textColor: Colors.red,
-                  child: Text('Forgot Password'),
+                Container(
+                  padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                  child: TextField(
+                    obscureText: true,
+                    controller: passwordController,
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'retype password',
+                    ),
+                  ),
                 ),
                 Container(
                     height: 50,
@@ -64,33 +69,17 @@ class _State extends State<LoginPage> {
                     child: RaisedButton(
                       textColor: Colors.white,
                       color: Colors.red,
-                      child: Text('Login'),
+                      child: Text('Register'),
                       onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                          builder: (ctx) {
+                            return LoginPage();
+                          },
+                        ));
                         print(nameController.text);
                         print(passwordController.text);
                       },
                     )),
-                Container(
-                    child: Row(
-                  children: <Widget>[
-                    Text('Does not have account?'),
-                    FlatButton(
-                      textColor: Colors.red,
-                      child: Text(
-                        'Sign in',
-                        style: TextStyle(fontSize: 20),
-                      ),
-                      onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (ctx) {
-                            return Register();
-                          },
-                        ));
-                      },
-                    )
-                  ],
-                  mainAxisAlignment: MainAxisAlignment.center,
-                ))
               ],
             )));
   }
