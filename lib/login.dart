@@ -9,6 +9,10 @@ class LoginPage extends StatefulWidget {
 class _State extends State<LoginPage> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  String nUsername, nPassword;
+
+  //tambahkan form
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -18,9 +22,11 @@ class _State extends State<LoginPage> {
         ),
         body: Padding(
             padding: EdgeInsets.all(10),
-            child: ListView(
-              children: <Widget>[
-                Container(
+            child: Form(
+              key: _formKey,
+              child: Column(
+                children: <Widget>[
+                  Container(
                     alignment: Alignment.center,
                     padding: EdgeInsets.all(10),
                     child: Text(
@@ -32,7 +38,14 @@ class _State extends State<LoginPage> {
                     )),
                 Container(
                   padding: EdgeInsets.all(10),
-                  child: TextField(
+                  child: TextFormField(
+                    //cek data field nya kosong
+                    validator: (value) {
+                      if (value.isEmpty) {
+                        return 'Please Input Username';
+                      }
+                      return null;
+                    },
                     controller: nameController,
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -42,7 +55,14 @@ class _State extends State<LoginPage> {
                 ),
                 Container(
                   padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
-                  child: TextField(
+                  child: TextFormField(
+                    //cek data field nya kosong
+                    validator: (value) {
+                      if (value.isEmpty) {
+                        return 'Please Input Username';
+                      }
+                      return null;
+                    },
                     obscureText: true,
                     controller: passwordController,
                     decoration: InputDecoration(
@@ -66,10 +86,23 @@ class _State extends State<LoginPage> {
                       color: Colors.red,
                       child: Text('Login'),
                       onPressed: () {
-                        print(nameController.text);
-                        print(passwordController.text);
-                      },
-                    )),
+                        //cek apakah username = sadli
+                        //cek password < 5 : gak bisa login, >5 bisa login
+                        nUsername = nameController.text;
+                        nPassword = passwordController.text;
+
+                        if (_formKey.currentState.validate()) {
+
+                          if(nUsername != 'sadli'){
+                            print("username salah");
+                          }else if(nPassword.length <= 5){
+                            print("password harus lebih dari 5 ");
+                          }else{
+                            print(nUsername);
+                            print(nPassword);
+                            print('login berhasil');
+                      }}},
+                        )),
                 Container(
                     child: Row(
                   children: <Widget>[
@@ -88,10 +121,13 @@ class _State extends State<LoginPage> {
                         ));
                       },
                     )
-                  ],
+                    ],
                   mainAxisAlignment: MainAxisAlignment.center,
                 ))
               ],
+              )
+              
+                  
             )));
   }
 }
