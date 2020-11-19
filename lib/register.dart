@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tugas1/login.dart';
+import 'package:tugas1/berhasil.dart';
 
 class Register extends StatefulWidget {
   @override
@@ -9,11 +9,13 @@ class Register extends StatefulWidget {
 class _State extends State<Register> {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  String nUsername;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
         appBar: AppBar(
           title: Text('SignIn Kerja.In'),
         ),
@@ -53,29 +55,21 @@ class _State extends State<Register> {
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
-                  child: TextField(
-                    obscureText: true,
-                    controller: passwordController,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'retype password',
-                    ),
-                  ),
-                ),
-                Container(
                     height: 50,
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
                     child: RaisedButton(
                       textColor: Colors.white,
                       color: Colors.red,
                       child: Text('Register'),
                       onPressed: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                          builder: (ctx) {
-                            return LoginPage();
-                          },
-                        ));
+                        nUsername = nameController.text;
+                        Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Berhasil(
+                                    nama: nUsername, 
+                                    // variable yang di pass ke page home
+                          )));
                         print(nameController.text);
                         print(passwordController.text);
                       },
