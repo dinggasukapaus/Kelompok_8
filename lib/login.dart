@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tugas1/register.dart';
+import 'package:tugas1/berhasil.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -14,9 +15,30 @@ class _State extends State<LoginPage> {
   //tambahkan form
   final _formKey = GlobalKey<FormState>();
 
+  void _alert() {
+    AlertDialog alertDialog = new AlertDialog(
+      content: new Container(
+        height: 200.0,
+        child: new Center(
+          child: new Text("username/paswword anda salah"),
+        ),
+      ),
+      actions: [
+        FlatButton(
+          child: Text('Tutup'),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
+    );
+    showDialog(context: context, child: alertDialog);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomPadding: false,
         appBar: AppBar(
           title: Text('Login Kerja.In'),
         ),
@@ -93,14 +115,16 @@ class _State extends State<LoginPage> {
 
                         if (_formKey.currentState.validate()) {
 
-                          if(nUsername != 'sadli'){
-                            print("username salah");
-                          }else if(nPassword.length <= 5){
-                            print("password harus lebih dari 5 ");
+                          if(nUsername != 'sadli' || nPassword.length <= 5){
+                            _alert();     
                           }else{
-                            print(nUsername);
-                            print(nPassword);
-                            print('login berhasil');
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Berhasil(
+                                    nama: nUsername,
+                                     // variable yang di pass ke page home
+                          )));
                       }}},
                         )),
                 Container(
