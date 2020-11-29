@@ -1,5 +1,7 @@
 //package material
 import 'package:flutter/material.dart';
+import 'package:tugas1/DetailJob.dart';
+import 'package:tugas1/DetailJob.dart';
 import 'login.dart';
 
 //fungsi yang di jalankan pertamakali
@@ -20,7 +22,7 @@ class MyApp extends StatelessWidget {
     //mengembalikan materiap yang berisi data2 material design
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.red),
-      home: LoginPage(),
+      home: DetailJob(),
       //menghapus banner debug
       debugShowCheckedModeBanner: false,
     );
