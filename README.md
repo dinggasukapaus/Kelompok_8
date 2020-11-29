@@ -12,6 +12,9 @@
 ### Progres 4
 - [x] Validasi username dan password, nanti muncul di output nya
 
+### Progres 5
+- [x] Pembuatan Detail Job 
+
 ## Deskripsi aplikasi
 - Aplikasi ini dibuat atas dasar Tema SDGS 8 yaitu "Mendukung pertumbuhan ekonomi yang inklusif dan berkelanjutan, tenaga kerja penuh dan produktif dan pekerjaan yang layak bagi semua," Dari tema tersebut kami berinisiatif untuk membangun sebuah aplikasi bernama "Kerja.in" berbasis mobile. Aplikasi ini nantinya diharapkan dapat membantu para pelamar kerja dalam mencari serta memilah lahan pekerjaan yang sesuai dengan kemampuan ataupun keinginan. 
 
