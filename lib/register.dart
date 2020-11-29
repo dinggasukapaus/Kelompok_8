@@ -13,9 +13,8 @@ class _State extends State<Register> {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+        resizeToAvoidBottomPadding: false,
         appBar: AppBar(
           title: Text('SignIn Kerja.In'),
         ),
@@ -64,12 +63,12 @@ class _State extends State<Register> {
                       onPressed: () {
                         nUsername = nameController.text;
                         Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Berhasil(
-                                    nama: nUsername, 
-                                    // variable yang di pass ke page home
-                          )));
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Berhasil(
+                                      nama: nUsername,
+                                      // variable yang di pass ke page home
+                                    )));
                         print(nameController.text);
                         print(passwordController.text);
                       },

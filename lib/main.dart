@@ -1,8 +1,6 @@
 //package material
 import 'package:flutter/material.dart';
-import 'package:tugas1/DetailJob.dart';
-import 'package:tugas1/DetailJob.dart';
-import 'login.dart';
+import 'views/dashboard.dart';
 
 //fungsi yang di jalankan pertamakali
 void main() {
@@ -21,8 +19,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //mengembalikan materiap yang berisi data2 material design
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.red),
-      home: DetailJob(),
+      home: Dashboard(),
+
       //menghapus banner debug
       debugShowCheckedModeBanner: false,
     );
