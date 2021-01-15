@@ -3,6 +3,7 @@ class Company {
   final String job;
   final String city;
   final String sallary;
+  //asset logo
   final String image;
   final String mainCriteria;
   final String jobOpportunity;
@@ -227,11 +228,12 @@ List<Company> recentList = [
         "Maecenas dolor risus, luctus nec egestas id, dictum interdum lectus. Vivamus nec orci eget mauris luctus elementum. Donec nunc erat, viverra vitae suscipit quis, tempor dictum ligula. In nibh nulla, rhoncus ac lacinia tincidunt, luctus eu arcu. Proin nec nibh quis felis pellentesque pulvinar sit amet in justo. Sed hendrerit rutrum sem, in ornare ipsum bibendum sagittis. Donec tellus mi, facilisis ac nibh id, bibendum maximus diam. Quisque efficitur nunc purus, vel aliquet magna efficitur in. Cras pellentesque non massa vitae suscipit. Proin interdum turpis euismod quam finibus, id imperdiet felis lacinia.",
   ),
   Company(
-    companyName: "Apple.inc",
-    job: "System Safety Engineer",
+    companyName: "Youtube",
+    job: "content creator",
     city: "Silicon Valley, USA",
     sallary: "\$45K - \$78K",
-    image: "assets/download.png",
+    image:
+        "assets/youtube-black-icon-youtube-icon-youtube-logo-youtube-png-and-black-youtube-logo-640_640.png",
     tag: [
       "Full Time",
       "Remote",

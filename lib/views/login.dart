@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tugas1/views/register.dart';
-import 'package:tugas1/widgets/berhasil.dart';
 import 'package:tugas1/views/dashboard.dart';
 
 class LoginPage extends StatefulWidget {
@@ -139,7 +138,7 @@ class _State extends State<LoginPage> {
                         FlatButton(
                           textColor: Colors.red,
                           child: Text(
-                            'Sign in',
+                            'Sign up',
                             style: TextStyle(fontSize: 20),
                           ),
                           onPressed: () {

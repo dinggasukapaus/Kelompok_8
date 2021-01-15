@@ -3,10 +3,12 @@ import 'package:tugas1/data/companydata.dart';
 import 'package:tugas1/style/typografi.dart';
 import 'package:tugas1/views/company_tab.dart';
 import 'package:tugas1/views/description_tab.dart';
+import 'package:tugas1/widgets/camera.dart';
 
 class DetailJob extends StatelessWidget {
   final Company company;
   DetailJob({this.company});
+
 // class _State extends State<DetailJob>
   @override
   Widget build(BuildContext context) {
@@ -159,13 +161,20 @@ class DetailJob extends StatelessWidget {
                 child: SizedBox(
                   height: 50.0,
                   child: RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Camera(),
+                        ),
+                      );
+                    },
                     color: black,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12.0),
                     ),
                     child: Text(
-                      "Apply for Job",
+                      "Upload Document",
                       style: titleStyle.copyWith(
                         color: Colors.white,
                       ),

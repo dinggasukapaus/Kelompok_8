@@ -1,8 +1,5 @@
 //package material
 import 'package:flutter/material.dart';
-import 'package:tugas1/views/dashboard.dart';
-// import 'views/dashboard.dart';
-import 'views/DetailJob.dart';
 import 'views/login.dart';
 
 //fungsi yang di jalankan pertamakali
@@ -22,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     //mengembalikan materiap yang berisi data2 material design
     return MaterialApp(
-      home: Dashboard(),
+      home: LoginPage(),
 
       //menghapus banner debug
       debugShowCheckedModeBanner: false,

@@ -16,7 +16,7 @@ class _State extends State<Register> {
     return Scaffold(
         resizeToAvoidBottomPadding: false,
         appBar: AppBar(
-          title: Text('SignIn Kerja.In'),
+          title: Text('register'),
         ),
         body: Padding(
             padding: EdgeInsets.all(10),

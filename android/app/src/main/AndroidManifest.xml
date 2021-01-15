@@ -3,6 +3,8 @@
    <application
         android:label="tugas1"
         android:icon="@mipmap/ic_launcher">
+        <!-- mapbox -->
+        <!-- <meta-data android:name="com.mapbox.token" android:value="pk.eyJ1IjoiZGluZ2dhYXByaXMiLCJhIjoiY2tqeTcyeGkyMDlwNzJzbzZmeXh5cHh1bSJ9.qYyBlCQvPRMw74IdMl1crw" /> -->
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
