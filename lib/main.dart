@@ -1,6 +1,9 @@
 //package material
 import 'package:flutter/material.dart';
-import 'views/dashboard.dart';
+import 'package:tugas1/views/dashboard.dart';
+// import 'views/dashboard.dart';
+import 'views/DetailJob.dart';
+import 'views/login.dart';
 
 //fungsi yang di jalankan pertamakali
 void main() {

@@ -3,6 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tugas1/data/companydata.dart';
 import 'package:tugas1/style/typografi.dart';
 import 'package:tugas1/widgets/company_card.dart';
+import 'package:tugas1/widgets/company_card2.dart';
+import 'package:tugas1/views/DetailJob.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -117,8 +119,21 @@ class Dashboard extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   itemBuilder: (context, index) {
                     var company = companyList[index];
-                    return CompanyCard(
-                      company: company,
+                    return InkWell(
+                      onTap: () {
+                        //! next screen
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailJob(
+                              company: company,
+                            ),
+                          ),
+                        );
+                      },
+                      child: index == 0
+                          ? CompanyCard(company: company)
+                          : CompanyCard2(company: company),
                     );
                   },
                 ),
